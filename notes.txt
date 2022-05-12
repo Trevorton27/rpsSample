@@ -1,0 +1,6 @@
+requires user input
+
+1. something like mouseActionListener() required
+2. create 3 objects: rock, paper, scissors
+3. have console log go to webpage display
+4.
