@@ -3,4 +3,17 @@ requires user input
 1. something like mouseActionListener() required
 2. create 3 objects: rock, paper, scissors
 3. have console log go to webpage display
-4.
+4. while loop needed or use the "waiting for input" in its place
+
+const x = new X();
+const y = new Y();
+const z = new Z();
+
+const data = document.getElementById("rock");
+
+//will the actionlistener be in the html doc or js?
+//can data be put in equivalent conditions?
+
+let m = mouseAction();
+
+if m == x  //here I will have to have the mouseAction output to be able to be equivalent to the object(s)
