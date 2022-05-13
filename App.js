@@ -1,22 +1,17 @@
-var rock = document.getElementById("rock");
-var paper = document.getElementById("paper");
-var scissors = document.getElementById("scissors");
+var form = document.getElementById("addForm");
+var p = document.getElementById("p1");
+var message = "you chose rock";
 
-var r = "rock";
-var p = "paper";
-var s = "scissors";
 
-rock.addEventListener("submit", playGame)
+form.addEventListener("submit", playGame);
 
-function playGame(){
+function playGame(event){
+event.preventDefault();
+console.log(1);
+message = p;
+
+
 
 //make an array and have program pull out a random el
-
-
-if (r === "rock"){
-    console.log("win");
-}else{
-    console.log("lose");
-}
 
 }
