@@ -14,7 +14,9 @@ function playGame(){
 
 
 if (r === "rock"){
-    console.log("scissors");
+    console.log("win");
+}else{
+    console.log("lose");
 }
 
 }
