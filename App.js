@@ -15,13 +15,13 @@ let playerOne = document.getElementById("user-score");
 let playerTwo = document.getElementById("computer-score");
 
 function computerPlays(){
-let computerChoice = document.getElementById("computer-choice");
+const computerChoice = document.getElementById("computer-choice");
 computerChoice.innerText = "Your Opponent Chose " + selection;
 
 }
 
 function playRock(){
-    let userChoice = document.getElementById("user-choice");
+    const userChoice = document.getElementById("user-choice");
     userChoice.innerText = "You Chose Rock";
     computerPlays();
     if (selection === "Rock"){
@@ -39,26 +39,34 @@ function playRock(){
 }
 
 function playPaper(){
-    let userChoice = document.getElementById("user-choice");
+    const userChoice = document.getElementById("user-choice");
     userChoice.innerText = "You Chose Paper";
     computerPlays();
     if (selection === "Rock"){
         winner();
+        userScore++
+        playerOne.innerText = "Your Score: " + userScore;
     }else if (selection === "Paper"){
         tie();
     }else{
         loser();
+        compScore++;
+        playerTwo.innerText = "Computer's Score: " + compScore;
     }
 }
 
 function playScissors(){
-    let userChoice = document.getElementById("user-choice");
+    const userChoice = document.getElementById("user-choice");
     userChoice.innerText = "You Chose Scissors";
     computerPlays();
     if (selection === "Rock"){
         loser();
+        compScore++;
+        playerTwo.innerText = "Computer's Score: " + compScore;
     }else if (selection === "Paper"){
         winner();
+        userScore++
+        playerOne.innerText = "Your Score: " + userScore;
     }else{
         tie();
     }
