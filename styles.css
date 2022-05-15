@@ -2,3 +2,8 @@ Button{
     width: 100px;
     height: 100px;
 }
+#Rock{
+    color:black;
+    border: 20;
+    background-image:-moz-linear-gradient();
+}
