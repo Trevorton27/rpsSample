@@ -26,14 +26,17 @@ function playRock(){
     computerPlays();
     if (selection === "Rock"){
         tie();
+        removeEventListener('click', playRock);
     }else if (selection === "Paper"){
         loser();
         compScore++;
         playerTwo.innerText = "Computer's Score: " + compScore;
+        removeEventListener('click', rock);
     }else{
         winner();
-        userScore++
+        userScore++;
         playerOne.innerText = "Your Score: " + userScore;
+        removeEventListener('click', rock);
     }
     
 }
@@ -63,6 +66,7 @@ function playScissors(){
         loser();
         compScore++;
         playerTwo.innerText = "Computer's Score: " + compScore;
+        
     }else if (selection === "Paper"){
         winner();
         userScore++
