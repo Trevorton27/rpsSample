@@ -14,6 +14,8 @@ let userScore = 0, compScore = 0;
 let playerOne = document.getElementById("user-score");
 let playerTwo = document.getElementById("computer-score");
 
+const reset = document.getElementById("reset").addEventListener('click', resetGame);
+
 function computerPlays(){
 const computerChoice = document.getElementById("computer-choice");
 computerChoice.innerText = "Your Opponent Chose " + selection;
@@ -26,17 +28,17 @@ function playRock(){
     computerPlays();
     if (selection === "Rock"){
         tie();
-        removeEventListener('click', playRock);
+       
     }else if (selection === "Paper"){
         loser();
         compScore++;
         playerTwo.innerText = "Computer's Score: " + compScore;
-        removeEventListener('click', rock);
+        
     }else{
         winner();
         userScore++;
         playerOne.innerText = "Your Score: " + userScore;
-        removeEventListener('click', rock);
+        
     }
     
 }
@@ -86,4 +88,9 @@ function loser(){
 
 function tie(){
     result.innerText = "*Gasp* \nIt's a Tie!"
+}
+
+function resetGame(){
+    document.getElementById("computer-choice").innerText = " ";
+    document.getElementById("winner").innerText = " ";
 }

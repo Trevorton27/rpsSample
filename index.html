@@ -6,15 +6,20 @@
 </head>
 <body>
 
-    <h1>Choose Your Tool Below</h1>
+    <h1>What will you choose... It's Time for じゃん拳ぽん</h1>
     <!-- could use the hidden input type and set it equal to the size of the img-->
     
-    <div>
+    <div class="buttons">
         <Button id="rockBtn">
-            <img src="rock.jpg" alt="rock">
+            <img src="rock.jpg" alt="rock" id="rock">
         </Button>
         <Button id="paperBtn">Paper</Button>
+            <img src="paper.jpg" alt="paper" id="paper">
         <Button id="scissorsBtn">Scissors</Button>
+            <img src="scissors.jpg" alt="scissors" id="scissors">
+        <div class="reset-button">
+        <Button id="reset">Play Again!</Button>
+        </div>
     </div>
     <div>
         <h2 id="user-choice"></h2>

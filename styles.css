@@ -1,9 +1,27 @@
-Button{
-    width: 100px;
-    height: 100px;
+body{
+    text-align: center;
 }
-#Rock{
-    color:black;
-    border: 20;
-    background-image:-moz-linear-gradient();
+Button{
+    width: 200px;
+    height: 200px;
+    border: 10px;
+
+    
+    
+}
+#rock{
+    height: 230px;
+    width: 230px;
+    
+}
+#paper{
+    height: 230px;
+    width: 230px;
+    padding-left: 110px;
+    border-radius: 50%;
+}
+#scissors{
+    height: 230px;
+    width: 230px;
+    padding-left: 10px;
 }
