@@ -5,8 +5,7 @@ const paperPressed = paper.addEventListener('click', playPaper);
 const scissors = document.getElementById("scissorsBtn");
 const scissorsPressed = scissors.addEventListener('click', playScissors);
 
-const arr = ["Rock", "Paper", "Scissors"];
-let selection = arr.sort(() => 0.5 - Math.random())[0];
+
 
 let result = document.getElementById("winner");
 
@@ -16,10 +15,14 @@ let playerTwo = document.getElementById("computer-score");
 
 const reset = document.getElementById("reset").addEventListener('click', resetGame);
 
-function computerPlays(){
-const computerChoice = document.getElementById("computer-choice");
-computerChoice.innerText = "Your Opponent Chose " + selection;
+let arr = ["Rock", "Paper", "Scissors"];
+let selection = arr.sort(() => 0.5 - Math.random())[0];
 
+function computerPlays(select){
+    let computerChoice = document.getElementById("computer-choice");
+    computerChoice.innerText = "Your Opponent Chose " + selection;
+    select = arr.sort(() => 0.5 - Math.random())[0];
+    
 }
 
 function playRock(){
@@ -92,5 +95,7 @@ function tie(){
 
 function resetGame(){
     document.getElementById("computer-choice").innerText = " ";
+    document.getElementById("user-choice").innerText = " ";
     document.getElementById("winner").innerText = " ";
+    resetSelection = selection;
 }
