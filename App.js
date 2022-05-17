@@ -1,11 +1,6 @@
-const rock = document.getElementById("rockBtn");
-const rockPressed = rock.addEventListener('click', playRock);
-const paper = document.getElementById("paperBtn");
-const paperPressed = paper.addEventListener('click', playPaper);
-const scissors = document.getElementById("scissorsBtn");
-const scissorsPressed = scissors.addEventListener('click', playScissors);
-
-
+const rock = document.getElementById("rockBtn").addEventListener('click', playRock);
+const paper = document.getElementById("paperBtn").addEventListener('click', playPaper);
+const scissors = document.getElementById("scissorsBtn").addEventListener('click', playScissors);
 
 let result = document.getElementById("winner");
 
@@ -15,23 +10,18 @@ let playerTwo = document.getElementById("computer-score");
 
 const reset = document.getElementById("reset").addEventListener('click', resetGame);
 
-let arr = ["Rock", "Paper", "Scissors"];
-let selection = arr.sort(() => 0.5 - Math.random())[0];
 
-function computerPlays(select){
-    let computerChoice = document.getElementById("computer-choice");
-    computerChoice.innerText = "Your Opponent Chose " + selection;
-    select = arr.sort(() => 0.5 - Math.random())[0];
-    
-}
 
 function playRock(){
+    let arr = ["Rock", "Paper", "Scissors"];
+    let selection = arr.sort(() => 0.5 - Math.random())[0];
+    let computerChoice = document.getElementById("computer-choice");
+    computerChoice.innerText = "Your Opponent Chose " + selection;
+
     const userChoice = document.getElementById("user-choice");
     userChoice.innerText = "You Chose Rock";
-    computerPlays();
     if (selection === "Rock"){
         tie();
-       
     }else if (selection === "Paper"){
         loser();
         compScore++;
@@ -41,15 +31,17 @@ function playRock(){
         winner();
         userScore++;
         playerOne.innerText = "Your Score: " + userScore;
-        
     }
-    
 }
 
 function playPaper(){
+    let arr = ["Rock", "Paper", "Scissors"];
+    let selection = arr.sort(() => 0.5 - Math.random())[0];
+    let computerChoice = document.getElementById("computer-choice");
+    computerChoice.innerText = "Your Opponent Chose " + selection;
+
     const userChoice = document.getElementById("user-choice");
     userChoice.innerText = "You Chose Paper";
-    computerPlays();
     if (selection === "Rock"){
         winner();
         userScore++
@@ -64,9 +56,13 @@ function playPaper(){
 }
 
 function playScissors(){
+    let arr = ["Rock", "Paper", "Scissors"];
+    let selection = arr.sort(() => 0.5 - Math.random())[0];
+    let computerChoice = document.getElementById("computer-choice");
+    computerChoice.innerText = "Your Opponent Chose " + selection;
+
     const userChoice = document.getElementById("user-choice");
     userChoice.innerText = "You Chose Scissors";
-    computerPlays();
     if (selection === "Rock"){
         loser();
         compScore++;
