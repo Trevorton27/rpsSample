@@ -1,7 +1,7 @@
 const rock = document.getElementById("rockBtn").addEventListener('click', playRock);
 const paper = document.getElementById("paperBtn").addEventListener('click', playPaper);
 const scissors = document.getElementById("scissorsBtn").addEventListener('click', playScissors);
-
+//201 w 152 h
 let result = document.getElementById("winner");
 
 let userScore = 0, compScore = 0;
